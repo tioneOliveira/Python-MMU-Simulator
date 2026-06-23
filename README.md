@@ -17,15 +17,12 @@ python simulador.py
 
 ```mermaid
 graph TD
-    %% Nós e Conexões Principais
     A([Processo / Thread]) -->|Solicita Endereço Virtual| B(MMU)
     B --> C{Consulta Tabela<br>de Páginas}
     
-    %% Ramificação de Hit
     C -->|Página Presente| D[Page Hit]
     D --> E[Calcula Endereço Físico:<br>Frame * 8192 + Offset]
     
-    %% Ramificação de Fault
     C -->|Página Ausente| F[Page Fault<br>Falta de Página]
     F --> G{Existem Frames<br>Livres?}
     
@@ -38,23 +35,8 @@ graph TD
     K --> L
     L --> E
     
-    %% Fim
     E --> M[Atualiza Fila LRU<br>Move página para o fim]
     M --> N([Apresenta Endereço Físico<br>e Conteúdo])
-
-    %% Estilos (Classes)
-    classDef startStop fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef process fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
-    classDef decision fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
-    classDef mmu fill:#e8f5e9,stroke:#4caf50,stroke-width:2px;
-    classDef fault fill:#ffebee,stroke:#f44336,stroke-width:2px;
-
-    %% Atribuição das Classes aos Nós
-    class A,N startStop;
-    class D,E,H,J,K,L,M process;
-    class C,G decision;
-    class B mmu;
-    class F,I fault;
 ```
 
 
