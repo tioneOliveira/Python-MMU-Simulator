@@ -1,6 +1,6 @@
-# Link da apresentação: [TODO]
+# Link da apresentação: https://youtu.be/e_oijN3F_UY
 # Simulador de Gerenciamento de Memória Virtual (MMU)
-Este repositório contém a implementação do Segundo Trabalho Prático da disciplina de Análise e Aplicação de Sistemas Operacionais da Universidade do Vale do Rio dos Sinos (UNISINOS).
+Este repositório contém a implementação do Segundo Trabalho Prático da disciplina de Sistemas Operacionais: Análise e Aplicações da Universidade do Vale do Rio dos Sinos (UNISINOS).
 O objetivo do projeto é simular o funcionamento de uma Unidade de Gerenciamento de Memória (MMU), traduzindo endereços virtuais para físicos, gerenciando Page Faults e aplicando políticas de substituição de páginas.
 # Especificações do Sistema Simulado
 O sistema foi modelado em Python seguindo os requisitos estabelecidos no enunciado, supondo um sistema com as seguintes características:
